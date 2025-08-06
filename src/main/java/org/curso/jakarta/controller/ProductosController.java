@@ -10,7 +10,7 @@ import java.util.List;
 
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 
-@Path("producto")
+@Path("/producto")
 public class ProductosController {
 
     @Inject
