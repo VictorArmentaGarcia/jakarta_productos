@@ -5,6 +5,8 @@ import org.curso.jakarta.service.ProductoService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
 
 public class ProductoServiceImpl implements ProductoService {
 
@@ -23,7 +25,7 @@ public class ProductoServiceImpl implements ProductoService {
 
     @Override
     public Producto getProductoByID(int id) {
-        return listProductos.get(id);
+        return listProductos.stream().filter(p-> p.getId() == id).findAny().orElse(null);
     }
 
     @Override
