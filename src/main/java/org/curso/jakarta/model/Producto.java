@@ -1,5 +1,9 @@
 package org.curso.jakarta.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name= "productos")
 public class Producto {
 
     public Producto() {
@@ -12,6 +16,8 @@ public class Producto {
         this.id = id;
     }
 
+    @Id
+    @GeneratedValue(Strategy = GenerationType.IDENTITY)
     private int id;
     private String nombre;
     private String descripcion;

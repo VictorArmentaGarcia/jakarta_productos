@@ -1,0 +1,28 @@
+
+<persistence>
+    <persistence-unit name="productoJPA" transaction-type="JTA">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>org.curso.jakarta.model.Producto</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <jta-data-source>java:/productos</jta-data-source>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/productos" /> <!-- BD Mane -->
+            <property name="javax.persistence.jdbc.user" value="postgres" /> <!-- DB User -->
+            <property name="javax.persistence.jdbc.password" value="admin" /> <!-- DB Password -->
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/> <!-- DB Dialect -->
+            <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
+            <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+
+
+            <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update -->
+            <!--validate: comprueba que el esquema coincida con el de la base de datos pero no realiza ningun cambio-->
+            <!--update: actualiza el esquema de la base de datos que corresponda con las clases-->
+            <!--create: Genera el esquema de la base de datos desde 0-->
+            <!--create-drop: Crea el esquema pero elimina el squema al detener la aplicacion -->
+
+
+        </properties>
+
+    </persistence-unit>
+</persistence>
