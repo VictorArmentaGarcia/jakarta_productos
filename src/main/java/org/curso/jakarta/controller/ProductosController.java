@@ -6,8 +6,6 @@ import jakarta.ws.rs.core.Response;
 import org.curso.jakarta.model.Producto;
 import org.curso.jakarta.service.ProductoService;
 
-import java.util.List;
-
 import static jakarta.ws.rs.core.MediaType.APPLICATION_JSON;
 
 @Path("/producto")
@@ -19,7 +17,7 @@ public class ProductosController {
     @GET
     @Produces(APPLICATION_JSON)
     public Response getProductos(){
-        List<Producto> list = productoService.getProductos();
+        Object list = productoService.getProductos();
         return Response.ok().status(Response.Status.OK).entity(list).build();
     }
 

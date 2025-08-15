@@ -9,15 +9,8 @@ public class Producto {
     public Producto() {
     }
 
-    public Producto(int cantidad, String descripcion, String nombre, int id) {
-        this.cantidad = cantidad;
-        this.descripcion = descripcion;
-        this.nombre = nombre;
-        this.id = id;
-    }
-
     @Id
-    @GeneratedValue(Strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombre;
     private String descripcion;

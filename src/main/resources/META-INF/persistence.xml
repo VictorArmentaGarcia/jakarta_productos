@@ -1,15 +1,15 @@
-
-<persistence>
-    <persistence-unit name="productoJPA" transaction-type="JTA">
+<?xml version="1.0" encoding="utf-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="productosJPA" transaction-type="JTA">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <class>org.curso.jakarta.model.Producto</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <jta-data-source>java:/productos</jta-data-source>
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/productos" /> <!-- BD Mane -->
-            <property name="javax.persistence.jdbc.user" value="postgres" /> <!-- DB User -->
-            <property name="javax.persistence.jdbc.password" value="admin" /> <!-- DB Password -->
-            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/productos" /> <!-- BD Mane -->
+            <property name="jakarta.persistence.jdbc.user" value="postgres" /> <!-- DB User -->
+            <property name="jakarta.persistence.jdbc.password" value="admin" /> <!-- DB Password -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/> <!-- DB Dialect -->
             <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
             <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
