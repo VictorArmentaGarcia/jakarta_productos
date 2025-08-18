@@ -3,6 +3,10 @@
     <persistence-unit name="productosJPA" transaction-type="JTA">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <class>org.curso.jakarta.model.Producto</class>
+        <class>org.curso.jakarta.model.Carro</class>
+        <class>org.curso.jakarta.model.Categoria</class>
+        <class>org.curso.jakarta.model.Cliente</class>
+        <class>org.curso.jakarta.model.Direccion</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <jta-data-source>java:/productos</jta-data-source>
         <properties>
@@ -15,7 +19,7 @@
             <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
 
 
-            <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update -->
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" /> <!-- create / create-drop / update -->
             <!--validate: comprueba que el esquema coincida con el de la base de datos pero no realiza ningun cambio-->
             <!--update: actualiza el esquema de la base de datos que corresponda con las clases-->
             <!--create: Genera el esquema de la base de datos desde 0-->
