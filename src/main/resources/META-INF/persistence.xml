@@ -19,7 +19,7 @@
             <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
 
 
-            <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update -->
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" /> <!-- create / create-drop / update -->
             <!--validate: comprueba que el esquema coincida con el de la base de datos pero no realiza ningun cambio-->
             <!--update: actualiza el esquema de la base de datos que corresponda con las clases-->
             <!--create: Genera el esquema de la base de datos desde 0-->
